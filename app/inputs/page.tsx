@@ -1,4 +1,6 @@
 import { Input } from "@/components/ui/input"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"
 
 export default function IndexPage() {
   return (
@@ -27,6 +29,14 @@ export default function IndexPage() {
       <div className="flex gap-4" style={{ border: "1px solid grey", padding: 24 }}>
         <Input label="Password Field" type="password" placeholder="Placeholder" />
         <Input label="Email Field" type="email" placeholder="Placeholder" />
+      </div>
+      <div style={{ border: "1px solid grey", padding: 24 }}>
+        <Label>Checkboxes</Label>
+        <div>
+          <Checkbox label="1" />
+          <Checkbox label="2" />
+          <Checkbox label="3" />
+        </div>
       </div>
     </section>
   )

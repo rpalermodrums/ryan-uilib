@@ -1,4 +1,4 @@
-import { Card } from '@components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 
 export default function IndexPage() {
@@ -7,16 +7,16 @@ export default function IndexPage() {
       <div className="flex max-w-[980px] flex-col items-start gap-2">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
           Cards
-        </h1>
+        </h1>``
       </div>
       <div className="flex gap-4">
         <Card>
-          <Card.Header>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Description>Card Description</Card.Description>
-          </Card.Header>
-          <Card.Content>Card Content</Card.Content>
-          <Card.Footer>Card Footer</Card.Footer>
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter>Card Footer</CardFooter>
         </Card>
       </div>
     </section>

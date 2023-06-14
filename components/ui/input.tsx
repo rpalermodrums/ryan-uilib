@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+import { Label } from '@/components/ui/label'
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -12,7 +13,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div>
         <div>
-          {label ? <label className="flex flex-col">{label}</label> : null}
+          {label ? <Label className="flex flex-col">{label}</Label> : null}
         </div>
         <div>
           <input
