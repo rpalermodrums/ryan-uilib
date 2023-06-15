@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectSeparator, SelectTrigger } from "@/components/ui/select"
 
 export default function IndexPage() {
   return (
@@ -47,6 +48,31 @@ export default function IndexPage() {
           <RadioGroupItem label="3" value={"3"} />
         </RadioGroup>
       </div>
+      <div style={{ border: "1px solid grey", padding: 24 }}>
+        <Label>Select</Label>
+        <Select>
+          <SelectTrigger>Option 1</SelectTrigger>
+          <SelectContent>
+            <SelectGroup key="group-1">
+              <SelectItem value="group-1">Option 1</SelectItem>
+              <SelectItem value="group-2">Option 2</SelectItem>
+              <SelectItem value="group-3">Option 3</SelectItem>
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup key="group-2">
+              <SelectItem value="group-1">Option 1</SelectItem>
+              <SelectItem value="group-2">Option 2</SelectItem>
+              <SelectItem value="group-3">Option 3</SelectItem>
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup key="group-3">
+              <SelectItem value="group-1">Option 1</SelectItem>
+              <SelectItem value="group-2">Option 2</SelectItem>
+              <SelectItem value="group-3">Option 3</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        </div>
     </section>
   )
 }
