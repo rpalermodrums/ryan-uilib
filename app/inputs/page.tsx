@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 export default function IndexPage() {
   return (
@@ -37,6 +38,14 @@ export default function IndexPage() {
           <Checkbox label="2" />
           <Checkbox label="3" />
         </div>
+      </div>
+      <div style={{ border: "1px solid grey", padding: 24 }}>
+        <Label>Radio Group</Label>
+        <RadioGroup>
+          <RadioGroupItem label="1" value={"1"} />
+          <RadioGroupItem label="2" value={"2"} />
+          <RadioGroupItem label="3" value={"3"} />
+        </RadioGroup>
       </div>
     </section>
   )
