@@ -19,6 +19,10 @@ export const siteConfig = {
       href: "/inputs",
     },
     {
+      title: "Skeleton",
+      href: "/skeleton",
+    },
+    {
       title: "Table",
       href: "/table",
     },
