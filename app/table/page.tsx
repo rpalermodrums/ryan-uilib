@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import Title from "@/app/title";
 
 const invoices = [
   {
@@ -48,12 +49,8 @@ const invoices = [
 
 export default function TablePage () {
   return (
-    <section className="container grid gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Table
-        </h1>
-      </div>
+    <>
+      <Title text="Tables" />
       <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
@@ -67,7 +64,7 @@ export default function TablePage () {
         <TableBody>
           {invoices.map((invoice) => (
             <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
+              <TableCell>{invoice.invoice}</TableCell>
               <TableCell>{invoice.paymentStatus}</TableCell>
               <TableCell>{invoice.paymentMethod}</TableCell>
               <TableCell className="text-right">{invoice.totalAmount}</TableCell>
@@ -76,6 +73,6 @@ export default function TablePage () {
         </TableBody>
 
       </Table>
-    </section>
+    </>
   )
 }

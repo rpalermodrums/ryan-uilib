@@ -3,15 +3,12 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectSeparator, SelectTrigger } from "@/components/ui/select"
+import Title from "@/app/title"
 
 export default function IndexPage() {
   return (
-    <section className="container grid gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Inputs
-        </h1>
-      </div>
+    <>
+      <Title text="Inputs" />
       <div className="flex gap-4" style={{ border: "1px solid grey", padding: 24 }}>
         <Input label="Text Field" placeholder="Placeholder" />
         <Input label="Number Field" type="number" placeholder="Placeholder" />
@@ -73,6 +70,6 @@ export default function IndexPage() {
           </SelectContent>
         </Select>
         </div>
-    </section>
+    </>
   )
 }

@@ -1,6 +1,8 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
+  name: 'ryan-uilib',
+  description: 'A UI library for React and Next.js',
   mainNav: [
     {
       title: "Alerts",

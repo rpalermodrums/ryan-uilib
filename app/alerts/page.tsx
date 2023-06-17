@@ -11,15 +11,12 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
+import Title from "@/app/title"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Alerts
-        </h1>
-      </div>
+    <>
+      <Title text="Alerts" />
       <div className="flex gap-4">
         <Alert
           title="Alert Title"
@@ -56,6 +53,6 @@ export default function IndexPage() {
           </AlertDialogContent>
         </AlertDialog>
       </div>
-    </section>
+    </>
   )
 }
