@@ -1,9 +1,18 @@
-import { ColorPalettesType } from '@/types/colors';
 import { colors } from './colors';
+import { ColorIntentType, ColorModeType, ColorProminenceType, ColorUsageType, InteractionOptions } from "@/types/colors";
 
-export const colorPalettes: ColorPalettesType = [
+type ColorPaletteOptions = {
+  color: string;
+  hex: string;
+  interaction: 'default' | InteractionOptions;
+} & ColorProminenceType &
+  ColorIntentType &
+  ColorUsageType &
+  ColorModeType;
+
+export const colorPalettes: ColorPaletteOptions[] = [
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -12,7 +21,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error050']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -21,7 +30,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error075']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -30,7 +39,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error400']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -39,7 +48,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error500']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -48,7 +57,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error600']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -57,7 +66,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error700']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -66,7 +75,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error600']
   },
   {
-    sentiment: 'danger',
+    intent: 'danger',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -75,7 +84,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['error700']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -84,7 +93,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info050']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -93,7 +102,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info075']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -102,7 +111,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info400']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -111,7 +120,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info600']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -120,7 +129,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info700']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -129,7 +138,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info600']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -138,7 +147,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info700']
   },
   {
-    sentiment: 'info',
+    intent: 'info',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -147,7 +156,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['info600']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -156,7 +165,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray005']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -165,25 +174,25 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray025']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'background',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'default',
     interaction: 'default',
     color: 'gray040',
     hex: colors['gray040']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'background',
-    prominence: 'weak',
+    prominence: 'mild',
     mode: 'default',
     interaction: 'default',
     color: 'gray001',
     hex: colors['gray001']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -192,16 +201,16 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray025']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'border',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'default',
     interaction: 'default',
     color: 'gray035',
     hex: colors['gray035']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -210,25 +219,25 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray800']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'icon',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'default',
     interaction: 'default',
     color: 'blue400',
     hex: colors['blue400']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'icon',
-    prominence: 'weak',
+    prominence: 'mild',
     mode: 'default',
     interaction: 'default',
     color: 'blue200',
     hex: colors['blue200']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -237,7 +246,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray050']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -246,25 +255,25 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['paragraph600']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'text',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'dark',
     interaction: 'default',
     color: 'blue050',
     hex: colors['blue050']
   },
   {
-    sentiment: 'neutral',
+    intent: 'neutral',
     usage: 'text',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'default',
     interaction: 'default',
     color: 'paragraph700',
     hex: colors['paragraph700']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'dark',
@@ -273,7 +282,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray400']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'dark',
@@ -282,7 +291,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray800']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'dark',
@@ -291,7 +300,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray600']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'dark',
@@ -300,7 +309,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray600']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -309,7 +318,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue005']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -318,7 +327,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['white']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -327,7 +336,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray001']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -336,7 +345,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue010']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'dark',
@@ -345,7 +354,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue200']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'dark',
@@ -354,7 +363,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray200']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'dark',
@@ -363,7 +372,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'dark',
@@ -372,7 +381,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray400']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -381,7 +390,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue800']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -390,7 +399,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray050']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -399,7 +408,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray035']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -408,7 +417,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -417,7 +426,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue050']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -426,7 +435,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue200']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -435,7 +444,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -444,7 +453,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue050']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -453,7 +462,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue800']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -462,7 +471,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray400']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -471,7 +480,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['paragraph600']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -480,7 +489,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray600']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -489,7 +498,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue100']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -498,7 +507,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['white']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -507,7 +516,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray200']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -516,7 +525,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue100']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -525,7 +534,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue800']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -534,7 +543,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray800']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -543,7 +552,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue600']
   },
   {
-    sentiment: 'primary',
+    intent: 'primary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -552,7 +561,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue800']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'background',
     prominence: 'default',
     mode: 'dark',
@@ -561,7 +570,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray600']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -570,7 +579,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue025']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -579,7 +588,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray025']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -588,7 +597,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray040']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -597,7 +606,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray035']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -606,7 +615,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray050']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -615,7 +624,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray040']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -624,7 +633,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray025']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -633,7 +642,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -642,7 +651,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue050']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -651,7 +660,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['white']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -660,7 +669,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'dark',
@@ -669,7 +678,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray050']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -678,7 +687,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -687,7 +696,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['paragraph600']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -696,7 +705,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['paragraph600']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -705,7 +714,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -714,7 +723,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['white']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -723,7 +732,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray100']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -732,7 +741,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['gray200']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'dark',
@@ -741,7 +750,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['white']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -750,7 +759,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue900']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -759,7 +768,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['paragraph800']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -768,7 +777,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['paragraph700']
   },
   {
-    sentiment: 'secondary',
+    intent: 'secondary',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -777,7 +786,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['blue900']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -786,7 +795,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success050']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'background',
     prominence: 'default',
     mode: 'default',
@@ -795,25 +804,25 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success075']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'background',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'default',
     interaction: 'default',
     color: 'success500',
     hex: colors['success500']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'background',
-    prominence: 'strong',
+    prominence: 'spicy',
     mode: 'default',
     interaction: 'hover',
     color: 'success550',
     hex: colors['success550']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -822,7 +831,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success500']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'border',
     prominence: 'default',
     mode: 'default',
@@ -831,7 +840,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success600']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -840,7 +849,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success600']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'icon',
     prominence: 'default',
     mode: 'default',
@@ -849,7 +858,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success700']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
@@ -858,7 +867,7 @@ export const colorPalettes: ColorPalettesType = [
     hex: colors['success600']
   },
   {
-    sentiment: 'success',
+    intent: 'success',
     usage: 'text',
     prominence: 'default',
     mode: 'default',
