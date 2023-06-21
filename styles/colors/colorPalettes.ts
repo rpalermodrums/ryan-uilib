@@ -1,4 +1,4 @@
-import { ColorPalettesType } from '../../types/colors';
+import { ColorPalettesType } from '@/types/colors';
 import { colors } from './colors';
 
 export const colorPalettes: ColorPalettesType = [
